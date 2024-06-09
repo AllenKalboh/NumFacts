@@ -1,148 +1,284 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
-li,a,button{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 25px;
-    color:aliceblue;
-    text-decoration: none;
+li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: aliceblue;
+  text-decoration: none;
 }
-header{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
 }
-.num{
-    margin-right: auto;
-    font-size: 50px;
-    cursor: pointer;
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.nav-line {
+  border-color: blueviolet;
+}
+.history-line {
+  border-color: blueviolet;
+  width: 100%;
+}
+.num {
+  margin-right: auto;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.buttons{
-    list-style: none;
+.buttons {
+  list-style: none;
 }
 
-.buttons li{
-    display: inline-block;
-    padding: 0px 20px;
+.buttons li {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
 .buttons li a {
-    transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .buttons li a:hover {
-    color: blueviolet;
+  color: blueviolet;
+}
+.categories {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.category {
+  display: inline;
+  margin: 10px 0;
+  color: white;
+  padding: 10px 32px;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-button{
-    padding: 9px 25px;
-    background-color:blueviolet;
-    border:none;
-    border-radius: 50px;
-    cursor:pointer;
-    transition: all 0.3s ease 0s;
+.math {
+  border: 1px solid white;
+  border-radius: 8px 0 0 8px;
+}
+.trivia {
+  border: 1px solid white;
+}
+.date {
+  border: 1px solid white;
+  border-radius: 0 8px 8px 0;
+}
+.category:hover {
+  color: white;
+  background-color: blueviolet;
+  font-weight: 600;
+}
+.category:active {
+  color: blueviolet;
+  background-color: white;
+  font-weight: 600;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-button:hover{
-    background-color:rgb(109, 45, 168);
+.userBox {
+  border: 1px solid white;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  border-radius: 8px;
+  padding: 0 8px;
+  height: 44px;
+  width: 30%;
+  max-width: 440px;
+  margin-bottom: 8px;
 }
-.selection{
-    height: 50px;
-    width: 400px;
-    border-radius: 7px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-    color: white;
+
+.submit {
+  font-size: 16px;
+  color: white;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: blueviolet;
+  height: 44px;
+  width: 30%;
+  max-width: 440px;
+  cursor: pointer;
+  font-weight: 600;
 }
-.userInput{
-    font-weight: bold;
-    font-size: 22px;
+.submit:hover {
+  color: blueviolet;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.submit:active {
+  background-color: blueviolet;
+  font-family: Montserrat;
+  color: white;
+  border-style: none;
+}
+
+.output {
+  display: flex;
+  border: 1px solid white;
+  min-height: 240px;
+  width: 30%;
+  max-width: 560px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.history {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 40%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.history-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.history-data {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.selection {
+  height: 50px;
+  width: 400px;
+  border-radius: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  color: white;
+}
+.userInput {
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .output {
     display: flex;
+    border: 1px solid white;
+    /* min-height: 240px; */
+    width: 96%;
+    /* max-width: 560px;  */
     justify-content: center;
     align-items: center;
     color: white;
-}
-.userBox{
-    border-width: 3px;
-    border-color: white;
-    background-color: rgb(37,37,37);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .history {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .submit {
+    width: 60%;
+    height: 32px;
+  }
+  .userBox {
+    width: 60%;
+  }
+  .submit {
+    font-size: 14px;
+  }
+  .category {
+    margin: 10px 0;
     color: white;
-    border-style: solid;
-    border-radius: 20px;
-    font-size: 45px;
+    padding: 8px 16px;
+    font-size: 12px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+  .nav-bar {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    border-radius: 10px;
     text-align: center;
-    height: 70px;
-    width: 170px;
-}
-.math{
-    transition: 0.2s;
-    font-size: 18px;
-    cursor:pointer;
-}
-.trivia{
-    transition: 0.2s;
-    font-size: 18px;
-    cursor:pointer;
-}
-.date{
-    transition: 0.2s;
-    font-size: 18px;
-    cursor:pointer;
-}
-.math:hover{
-    background-color: blueviolet;
-}
-.trivia:hover{
-    background-color: blueviolet;
-}
-.date:hover{
-    background-color: blueviolet;
-}
-.history{
-    font-size: 42px;
-}
-.submit{
-    font-size: 16px;
-    color: white;
-    border-width: 1px;
-    border-color: white ;
-    border-style: solid;
-    border-radius: 10px;
-    background-color: blueviolet;
-    height:40px;
-    width:70px;
-    cursor:pointer;
-}
-.submit:hover{
-    color: blueviolet;
-    border-style: solid;
-    border-radius: 10px;
-    background-color: white;
-    height:40px;
-    width:70px;
-    cursor:pointer;
-    transition: 0.2s;
-}
-.submit:active{
-    background-color: blueviolet;
-    font-family: Montserrat;
-    color: white;
-    border-style: none;
-}
-.output{
-    font-size: 22px;
-    color: white;
-    width: 900px;
-    height: 180px;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: white;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-bar.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
