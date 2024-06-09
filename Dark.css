@@ -162,6 +162,8 @@ input::-webkit-inner-spin-button {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
+  padding: 0px 8px;
+  text-align: center;
 }
 
 .history {
@@ -280,5 +282,8 @@ input::-webkit-inner-spin-button {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+  .history-data {
+    font-size: 14px;
   }
 }
